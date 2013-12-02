@@ -1,0 +1,9 @@
+<div id="" class="field">
+    <label>Подкатегория<sup>&nbsp;*</sup></label>
+    <select class="wide" name="subcategory">
+        <option value=""></option>
+        <% _.each(categories, function(item) { %>
+        <option value="<%=item.category_sid%>"><%=item.category_name%></option>
+        <% }); %>
+    </select>
+</div>

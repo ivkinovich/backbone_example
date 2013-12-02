@@ -1,0 +1,99 @@
+<% _.each (proposalsCollection, function(model) { %>
+    <tr class="">
+        <td>
+            <span class="cell">
+                <input type="checkbox" class="" value=""/>
+            </span>
+        </td>
+        <td class="status">
+            <div class="highlighted"></div>
+            <div>
+                <a href="" class="info-popup">&nbsp;</a>
+                <div class="userCabPopupCloud">
+                    <div class="tr">
+                        <div class="bl">
+                            <div class="popupCloudContent"></div>
+                            <div class="tl"></div>
+                            <div class="br"></div>
+                            <div class="topArr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td class="photo">
+            <div>
+                <img src="/skin/accounts/img/temp/img_15.png" alt=""/>
+            </div>
+        </td>
+        <td class="offer">
+            <p>
+                <a href=""><span><%=model.title%></span></a>
+            </p>
+            <p class="section_name">
+                <a href=""><span><%=model.category.category_name%></span></a>
+            </p>
+        </td>
+        <td class="price"><p><%=model.price_from%><span class="rubler">P<span>–</span></span></p></td>
+        <td class="address">
+            <p>
+                <a href=""><span>Москва, Улица Хавская, дом&nbsp;22</span></a>
+            </p>
+        </td>
+        <td class="creation_date">
+            <p><%=utilsDateTime.humanString(1000 * model.date_create)%></p>
+        </td>
+        <td class="operations">
+            <div>
+                <a href="">
+                    <span class="memo" style="display:none;">&nbsp;</span>
+                    <span>Действия</span>
+                </a>
+                <div class="b-popup b-popup_type_cloud operations__popup" style="display:none;">
+                    <div class="b-popup__rt">
+                        <div class="b-popup__lb">
+                            <div class="b-popup__content">
+                                <ul class="operations__list">
+                                    <li class="">
+                                        <a href="">
+                                            <span>Удалить из&nbsp;своих домов</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            <span>Я&nbsp;живу в&nbsp;этом доме</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            <span>Создать объявление</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            <span>Добавить фотографию дома</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            <span>Добавить запись в&nbsp;блог</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            <span>Добавить заметку</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="b-popup__lt"></div>
+                            <div class="b-popup__rb"></div>
+                            <div class="b-popup__arr_top"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+<% }); %>
+

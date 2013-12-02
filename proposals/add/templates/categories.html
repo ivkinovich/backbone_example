@@ -1,0 +1,26 @@
+<%
+    var i = 0,
+    max_coll = 4,
+    item_count = _.size(categories),
+    item_per_coll = Math.ceil(item_count/max_coll);
+%>
+<% _.each(categories, function(item) { %>
+    <% i++;%>
+    <% if(i == 1) { %>
+        <li class=""><ul>
+    <% } %>
+    <li>
+        <a data-category_id="<%=item.category_sid%>" data-proposal_type="<%=item.proposal_type%>" data-parent_id="<%=item.parent_sid%>" href="">
+            <%=item.category_name%>
+        </a>
+    </li>
+    <% if(i == item_per_coll){ %>
+        <% i = 0; %>
+        </ul></li>
+    <% } %>
+<% }); %>
+
+<% if(i < item_per_coll && i > 1) { %>
+    </ul></li>
+<% } %>
+
